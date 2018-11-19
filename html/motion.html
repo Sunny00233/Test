@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head>
+    <title>Motion</title>
+    <script>
+        function play(id){
+            id.style.visibility='hidden';
+            document.getElementById("one").style.animation="hopper1 8.28s";
+            document.getElementById("two").style.animation="hopper2 8.28s";
+            document.getElementById("three").style.animation="hopper3 8.28s";
+            document.getElementById("four").style.animation="hopper4 8.28s";
+            document.getElementById("five").style.animation="move1 8.28s infinite";
+            document.getElementById("five").style.animationDelay="8.28s";
+            document.getElementById("six").style.animation="move2 8.28s infinite";
+            document.getElementById("six").style.animationDelay="8.28s";
+            document.getElementById("seven").style.animation="move3 8.28s infinite";
+            document.getElementById("seven").style.animationDelay="8.28s";
+            document.getElementById("eight").style.animation="move4 8.28s infinite";
+            document.getElementById("eight").style.animationDelay="8.28s";
+        }
+    </script>
+    <style type='text/css'>
+        html,body{
+            background-color: cornflowerblue;
+            width: 100%;
+            height:100%;
+            margin:0px;
+        }
+        div{
+            margin:0 auto;
+            padding: 20% 0 0 0;
+            width:25%;
+            height:20%;
+        }
+        button{
+            text-align: center;
+            width:100%;
+            height:100%;
+            font-size: 20px;
+            font-weight:bold;
+            visibility: visible;
+        }
+        @keyframes hopper1{
+            0%{opacity: 1;}
+            24.9999%{transform: scaleX(1);}
+            25%{transform: scaleX(-1);}
+            49.9999%{transform: scaleX(-1);}
+            50%{transform: scaleX(1);}
+            74.9999%{transform: scaleX(1);}
+            75%{transform: scaleX(-1);}
+            99.9999%{transform: scaleX(-1);}
+            100%{transform: scaleX(1);opacity: 1;}
+        }
+        @keyframes hopper2{
+            0%{opacity: 0;}
+            24.9999%{transform: scaleX(1);opacity: 0;}
+            25%{transform: scaleX(-1);opacity: 1;}
+            49.9999%{transform: scaleX(-1);}
+            50%{transform: scaleX(1);}
+            74.9999%{transform: scaleX(1);}
+            75%{transform: scaleX(-1);}
+            99.9999%{transform: scaleX(-1);}
+            100%{transform: scaleX(1);opacity: 1;}
+        }
+        @keyframes hopper3{
+            0%{opacity: 0;}
+            25%{transform: scaleX(-1);opacity: 0;}
+            49.9999%{transform: scaleX(-1);opacity: 0;}
+            50%{transform: scaleX(1);opacity: 1;}
+            74.9999%{transform: scaleX(1);}
+            75%{transform: scaleX(-1);}
+            99.9999%{transform: scaleX(-1);}
+            100%{transform: scaleX(1);opacity: 1;}
+        }
+        @keyframes hopper4{
+            0%{opacity: 0;}
+            25%{transform: scaleX(-1);opacity: 0;}
+            50%{transform: scaleX(1);opacity: 0;}
+            74.9999%{transform: scaleX(1);opacity: 0;}
+            75%{transform: scaleX(-1);opacity: 1;}
+            99.9999%{transform: scaleX(-1);}
+            100%{transform: scaleX(1);opacity: 1;}
+        }
+        @keyframes move1{
+            0%{left: 10%;
+            top: 10%;opacity: 1;}
+            25%{left: 60%;
+            top: 10%;}
+            50%{left: 60%;
+            top: 60%;}
+            75%{left: 10%;
+            top: 60%;}
+            100%{left: 10%;
+            top: 10%;opacity: 1;}
+        }
+        @keyframes move2{
+            0%{left: 60%;
+            top: 10%;opacity: 1;}
+            25%{left: 60%;
+            top: 60%;}
+            50%{left: 10%;
+            top: 60%;}
+            75%{left: 10%;
+            top: 10%;}
+            100%{left: 60%;
+            top: 10%;opacity: 1;}
+        }
+        @keyframes move3{
+            0%{left: 60%;
+            top: 60%;opacity: 1;}
+            25%{left: 10%;
+            top: 60%;}
+            50%{left: 10%;
+            top: 10%;}
+            75%{left: 60%;
+            top: 10%;}
+            100%{left: 60%;
+            top: 60%;opacity: 1;}
+        }
+        @keyframes move4{
+            0%{left: 10%;
+            top: 60%;opacity: 1;}
+            25%{left: 10%;
+            top: 10%;}
+            50%{left: 60%;
+            top: 10%;}
+            75%{left: 60%;
+            top: 60%;}
+            100%{left: 10%;
+            top: 60%;opacity: 1;}
+        }
+        #one{    
+            position:absolute;
+            left: 10%;
+            top: 10%;
+            opacity: 0;            
+        }
+        #two{    
+            /* animation: hopper2 8.28s; */
+            position:absolute;
+            left: 60%;
+            top: 10%;
+            opacity: 0;
+        }   
+        #three{    
+            /* animation: hopper3 8.28s; */
+            position:absolute;
+            left: 60%;
+            top: 60%;
+            opacity: 0;
+        }
+        #four{    
+            /* animation: hopper4 8.28s; */
+            position:absolute;
+            left: 10%;
+            top: 60%;
+            opacity: 0;
+        }
+        #five{
+            /* animation: move1 8.28s infinite;
+            animation-delay: 8.28s; */
+            position:absolute;
+            left: 10%;
+            top: 10%;
+            opacity: 0;
+        }
+        #six{
+            /* animation: move2 8.28s infinite;
+            animation-delay: 8.28s; */
+            position:absolute;
+            left: 60%;
+            top: 10%;
+            opacity: 0;
+        }
+        #seven{
+            /* animation: move3 8.28s infinite;
+            animation-delay: 8.28s; */
+            position:absolute;
+            left: 60%;
+            top: 60%;
+            opacity: 0;
+        }
+        #eight{
+            /* animation: move4 8.28s infinite;
+            animation-delay: 8.28s; */
+            position:absolute;
+            left: 10%;
+            top: 60%;
+            opacity: 0;
+        }
+        img{
+            width:300px;
+            height:350px;
+        }                
+    </style>
+</head>
+<body>
+    <div><button type="button" onclick="play(this)" id="button">点我观看</button></div>
+    <img src="jallse.gif" id='one'>
+    <img src="jallse.gif" id='two'>
+    <img src="jallse.gif" id='three'>
+    <img src="jallse.gif" id='four'>
+    <img src="jallse.gif" id='five'>
+    <img src="jallse.gif" id='six'>
+    <img src="jallse.gif" id='seven'>
+    <img src="jallse.gif" id='eight'>
+</body>
